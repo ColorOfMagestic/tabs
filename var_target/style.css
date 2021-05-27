@@ -1,0 +1,52 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+
+.tabs-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-container {
+  display: flex;
+  order: -1;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  background-color: #eee;
+}
+
+.tab {
+  color: black;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.content:target {
+  display: block;
+}
+
+.content-1:target ~ .tabs-container .tab-1,
+.content-2:target ~ .tabs-container .tab-2 {
+  background-color: #eee;
+}
+
